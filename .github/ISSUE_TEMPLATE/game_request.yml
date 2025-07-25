@@ -1,0 +1,88 @@
+name: 🎲 보드게임 추가 요청
+description: 새로운 보드게임을 데이터베이스에 추가 요청
+title: "[GAME] "
+labels: ["game-request", "content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        새로운 보드게임 추가 요청을 해주셔서 감사합니다! 🎮
+        
+  - type: input
+    id: game-name
+    attributes:
+      label: 게임 이름
+      description: 추가하고 싶은 보드게임의 이름을 입력해주세요
+      placeholder: 예) 윙스팬, 아줄, 스플렌더
+    validations:
+      required: true
+
+  - type: input
+    id: game-name-en
+    attributes:
+      label: 영문 이름 (선택사항)
+      description: 게임의 영문 이름이 있다면 입력해주세요
+      placeholder: 예) Wingspan, Azul, Splendor
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 게임 카테고리
+      description: 어떤 종류의 게임인가요?
+      options:
+        - 전략 게임
+        - 카드 게임
+        - 파티 게임
+        - 가족 게임
+        - 협력 게임
+        - 추상 게임
+        - 기타
+    validations:
+      required: true
+
+  - type: input
+    id: players
+    attributes:
+      label: 플레이어 수
+      description: 몇 명이서 플레이 가능한가요?
+      placeholder: 예) 2-4명, 3-6명
+    validations:
+      required: true
+
+  - type: input
+    id: playtime
+    attributes:
+      label: 플레이 시간
+      description: 대략적인 게임 시간을 알려주세요
+      placeholder: 예) 30-45분, 60-90분
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 게임 설명
+      description: 게임에 대한 간단한 설명을 해주세요
+      placeholder: |
+        - 게임의 기본 메커니즘
+        - 승리 조건
+        - 특징적인 요소들
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-important
+    attributes:
+      label: 추가 이유
+      description: 왜 이 게임이 추가되어야 한다고 생각하시나요?
+      placeholder: 예) 인기 게임이라 많은 사람들이 룰을 궁금해합니다, 복잡한 룰 때문에 설명이 필요합니다
+    validations:
+      required: true
+
+  - type: textarea
+    id: resources
+    attributes:
+      label: 참고 자료
+      description: 게임 룰북이나 참고할 만한 자료가 있다면 링크를 공유해주세요
+      placeholder: |
+        - 공식 룰북 PDF 링크
+        - BGG(BoardGameGeek) 링크
+        - 기타 참고 자료

@@ -1,0 +1,65 @@
+name: ✨ 기능 요청  
+description: 새로운 기능이나 개선사항을 제안해주세요
+title: "[FEATURE] "
+labels: ["enhancement", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        기능 요청을 해주셔서 감사합니다! 🚀
+        
+  - type: dropdown
+    id: component
+    attributes:
+      label: 컴포넌트
+      description: 어느 부분의 기능인가요?
+      options:
+        - Backend (AI 서버)
+        - Frontend (웹 인터페이스)
+        - 새로운 보드게임 추가
+        - 문서
+        - 기타
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 해결하고 싶은 문제
+      description: 현재 어떤 불편함이나 제한사항이 있나요?
+      placeholder: 예) 모바일에서 사용하기 불편합니다, 특정 게임의 룰을 찾을 수 없습니다
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 제안하는 해결방안
+      description: 어떤 기능이 추가되면 좋을까요?
+      placeholder: 구체적인 기능과 동작 방식을 설명해주세요
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 대안
+      description: 다른 해결방법이나 대안이 있다면 알려주세요
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: priority
+    attributes:
+      label: 우선순위
+      description: 이 기능이 얼마나 중요한가요?
+      options:
+        - label: 높음 - 핵심 기능에 영향을 줍니다
+        - label: 보통 - 사용성을 개선합니다  
+        - label: 낮음 - 있으면 좋은 기능입니다
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 추가 정보
+      description: 관련 스크린샷, 참고 자료, 또는 기타 정보가 있다면 첨부해주세요

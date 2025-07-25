@@ -1,0 +1,70 @@
+name: 🐛 버그 리포트
+description: 버그를 발견하셨나요? 문제를 해결할 수 있도록 도와주세요
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        버그 리포트를 작성해주셔서 감사합니다! 🙏
+        
+  - type: dropdown
+    id: component
+    attributes:
+      label: 컴포넌트
+      description: 어느 부분에서 문제가 발생했나요?
+      options:
+        - Backend (AI 서버)
+        - Frontend (웹 인터페이스)
+        - 문서
+        - 기타
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 무엇이 일어났나요?
+      description: 발생한 문제를 자세히 설명해주세요
+      placeholder: 예상한 동작과 실제 발생한 동작을 설명해주세요
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 재현 단계
+      description: 문제를 재현하는 방법을 단계별로 설명해주세요
+      placeholder: |
+        1. '...' 페이지로 이동
+        2. '...' 버튼 클릭
+        3. '...' 입력
+        4. 오류 발생
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 예상 동작
+      description: 어떤 결과를 예상했나요?
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 환경 정보
+      description: 사용 중인 환경을 알려주세요
+      placeholder: |
+        - OS: (예: Windows 10, macOS Big Sur, Ubuntu 20.04)
+        - 브라우저: (예: Chrome 91, Firefox 89, Safari 14)
+        - 버전: (해당하는 경우)
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 추가 정보
+      description: 스크린샷, 로그, 또는 기타 도움이 될 만한 정보가 있다면 첨부해주세요
